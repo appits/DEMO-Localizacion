@@ -1123,10 +1123,10 @@ class FiscalBook(models.Model):
                             if fb_brw.type == 'sale':
                                 if iwdl_brw.invoice_id.type == 'out_refund':
                                     cliente = True
-                                    local_inv_affected = str(iwdl_brw.invoice_id.ref)[14:28] if iwdl_brw.invoice_id.ref else ''
+                                    local_inv_affected = str(iwdl_brw.invoice_id.ref)[14:29] if iwdl_brw.invoice_id.ref else ''
                             elif iwdl_brw.invoice_id.type == 'in_refund':
                                 proveedor = True
-                                local_inv_affected = str(iwdl_brw.invoice_id.ref)[14:28] if iwdl_brw.invoice_id.ref else ''
+                                local_inv_affected = str(iwdl_brw.invoice_id.ref)[14:29] if iwdl_brw.invoice_id.ref else ''
 
                         if doc_type == 'N/DB' or doc_type == 'N/CR':
 
@@ -1228,10 +1228,10 @@ class FiscalBook(models.Model):
                                if busq1:
                                    for busq2 in busq1:
                                        if busq2.type == 'out_invoice':
-                                            local_inv_affected = str(inv_otro.ref)[14:28] if inv_otro.ref else ''
+                                            local_inv_affected = str(inv_otro.ref)[14:29] if inv_otro.ref else ''
                     elif inv_otro.type == 'in_refund':
                         proveedor = True
-                        local_inv_affected = str(inv_otro.ref)[14:28] if inv_otro.ref else ''
+                        local_inv_affected = str(inv_otro.ref)[14:29] if inv_otro.ref else ''
 
                 if doc_type == 'N/DB' or doc_type == 'N/CR':
 

@@ -340,15 +340,15 @@ class PurchaseBook(models.AbstractModel):
                 vat_additional_tax_importaciones = h.vat_additional_tax
 
             if vat_reduced_rate_importaciones == 0:
-                vat_reduced_rate_importaciones = ''
+                vat_reduced_rate_importaciones = 0
             else:
                 vat_reduced_rate_importaciones = ',' + str(vat_reduced_rate_importaciones)
             if vat_additional_rate_importaciones == 0:
-                vat_additional_rate_importaciones = ''
+                vat_additional_rate_importaciones = 0
             else:
                 vat_additional_rate_importaciones = ',' + str(vat_additional_rate_importaciones)
             if vat_general_base_importaciones == 0:
-                vat_general_base_importaciones = ''
+                vat_general_base_importaciones = 0
 
             if vat_general_base_importaciones == '' and vat_reduced_rate_importaciones== '' and vat_additional_rate_importaciones == '':
                 vat_general_base_importaciones = 0
